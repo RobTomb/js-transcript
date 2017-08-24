@@ -45,7 +45,7 @@ function input() {
 		flag = TorF(stuInfo);
 	}
 	push(stuInfo);
-	console.log(data);
+	menu();
 }
 
 function showInfo() {
@@ -57,7 +57,8 @@ function menu() {
 	const readlineSync = require('readline-sync'),
 		menu = ['ADD STUDENT','PRINT TRANSCRIPT'];
 		index = readlineSync.keyInSelect(menu, 'Pleace input your choice:');
-	eval(funName[index])();
+	if( index !== -1 )
+		eval(funName[index])();
 }
 
 function main() {
