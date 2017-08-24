@@ -1,11 +1,11 @@
 const data = require('./data')();
 const funName = ['input' , 'showInfo'];
-const tips = ['Please enter student information in accordance with the format\n' , 
-			'Please enter in the correct format\n' ];
+const tips = ['请输入学生信息，按回车提交：\n' , 
+			'请按正确的格式输入\n' ];
 
 function readInfo(flag) {
 	const readlineSync = require('readline-sync');
-	const format = `name:"jing" , id:2019 , class:1 , math:45 , chinese:60 , english:79 , progromming:99 `;
+	const format = `name:"洋洋" , id:2019 , class:1 , math:45 , chinese:60 , english:79 , progromming:99 `;
 	return readlineSync.question(tips[flag] + '\n' + format + '\n');
 }
 
@@ -35,6 +35,7 @@ function push(stuInfo) {
 	stuInfo['avg'] = 0 ;
 	stuInfo['sum'] = 0;
 	data.push(stuInfo);
+	console.log(`学生${stuInfo.name}的成绩被添加`);
 }
 
 function input() {
@@ -66,8 +67,8 @@ function countScore() {
 	return totalScore;
 }
 
-const tipId = ['Please input the students id to be printed\n' , 
-				'Please enter the information in the correct format\n'];
+const tipId = ['请输入要打印的学生的学号，按回车提交：\n' , 
+				'请按正确的格式输入要打印的学生的学号，按回车提交：\n'];
 
 function readId(flag) {
 	const readlineSync = require('readline-sync');
@@ -119,14 +120,15 @@ function showInfo() {
 	}
 	id = formatId(id);
 	printInfo(id);
+	menu();
 }
 
 
 function menu() {
 
 	const readlineSync = require('readline-sync'),
-		menu = ['ADD STUDENT','PRINT TRANSCRIPT'];
-		index = readlineSync.keyInSelect(menu, 'Pleace input your choice:');
+		menu = ['添加学生','生成成绩单'];
+		index = readlineSync.keyInSelect(menu, '请输入你的选择:');
 	if( index !== -1 )
 		eval(funName[index])();
 }
