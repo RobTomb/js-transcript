@@ -1,0 +1,22 @@
+{
+  "name": "js-transcript",
+  "version": "1.0.0",
+  "description": "practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobTomb/js-transcript.git"
+  },
+  "author": "robtomb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RobTomb/js-transcript/issues"
+  },
+  "devDependencies": {
+    "readline-sync": "^1.4.7"
+  },
+  "homepage": "https://github.com/RobTomb/js-transcript#readme"
+}
