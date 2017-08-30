@@ -47,5 +47,5 @@ module.exports = function inputInfo(data) {
 
 	push(data , stuInfo);
 
-	Menu.menu(data);
+	// Menu.menu(data);
 }

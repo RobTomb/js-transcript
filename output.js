@@ -72,5 +72,5 @@ module.exports = function output(data) {
 	}
 	id = str2arr(id);
 	printInfo(data , id);
-	Menu.menu(data);
+	// Menu.menu(data);
 }
